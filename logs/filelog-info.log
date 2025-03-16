@@ -1,0 +1,116 @@
+{"level":"info","message":"Scheduling cron job with expression: 30 7 * * *","timestamp":"2025-02-17 11:37:48"}
+{"level":"info","message":"All cron jobs scheduled successfully.","timestamp":"2025-02-17 11:37:48"}
+{"level":"info","message":"Connected to the database.","timestamp":"2025-02-17 11:37:49"}
+{"level":"info","message":"Starting database seeding...","timestamp":"2025-02-17 11:37:49"}
+{"level":"info","message":"Bank data seeded successfully.","timestamp":"2025-02-17 11:37:49"}
+{"level":"info","message":"Property types and sub-types seeded successfully.","timestamp":"2025-02-17 11:37:49"}
+{"level":"info","message":"States seeded successfully.","timestamp":"2025-02-17 11:37:49"}
+{"level":"warn","message":"State \"Puducherry (UT)\" not found in the database. Skipping.","timestamp":"2025-02-17 11:37:49"}
+{"level":"info","message":"All cities seeded successfully.","timestamp":"2025-02-17 11:37:49"}
+{"level":"info","message":"Admin user seeded successfully.","timestamp":"2025-02-17 11:37:49"}
+{"level":"info","message":"Starting gold price scraping...","timestamp":"2025-02-17 11:37:49"}
+{"level":"info","message":"Today's date: 2025-02-17","timestamp":"2025-02-17 11:37:49"}
+{"level":"info","message":"Last updated date: undefined","timestamp":"2025-02-17 11:37:49"}
+{"level":"info","message":"Gold prices updated successfully.","timestamp":"2025-02-17 11:38:25"}
+{"level":"info","message":"Checking if areaPrices collection is empty...","timestamp":"2025-02-17 11:38:25"}
+{"level":"info","message":"Found scraped_data.json. Loading data...","timestamp":"2025-02-17 11:38:25"}
+{"level":"info","message":"Parsed data: 1023 records found.","timestamp":"2025-02-17 11:38:25"}
+{"level":"info","message":"Successfully loaded 1023 new records into the database.","timestamp":"2025-02-17 11:38:34"}
+{"level":"info","message":"Database seeding completed.","timestamp":"2025-02-17 11:38:34"}
+{"level":"info","message":"App listening at http://192.168.29.32:4100","timestamp":"2025-02-17 11:38:34"}
+{"level":"info","message":"Scheduling cron job with expression: 30 7 * * *","timestamp":"2025-02-17 11:48:12"}
+{"level":"info","message":"All cron jobs scheduled successfully.","timestamp":"2025-02-17 11:48:12"}
+{"level":"info","message":"Connected to the database.","timestamp":"2025-02-17 11:48:12"}
+{"level":"info","message":"Starting database seeding...","timestamp":"2025-02-17 11:48:12"}
+{"level":"info","message":"Starting gold price scraping...","timestamp":"2025-02-17 11:48:12"}
+{"level":"info","message":"Today's date: 2025-02-17","timestamp":"2025-02-17 11:48:12"}
+{"level":"info","message":"Last updated date: 2025-02-17","timestamp":"2025-02-17 11:48:12"}
+{"level":"info","message":"Gold prices are already up-to-date for today. Skipping update.","timestamp":"2025-02-17 11:48:12"}
+{"level":"info","message":"Checking if areaPrices collection is empty...","timestamp":"2025-02-17 11:48:12"}
+{"level":"info","message":"areaPrices collection already has data. Skipping data load.","timestamp":"2025-02-17 11:48:12"}
+{"level":"info","message":"Database seeding completed.","timestamp":"2025-02-17 11:48:12"}
+{"level":"info","message":"App listening at http://192.168.29.32:4100","timestamp":"2025-02-17 11:48:12"}
+{"level":"info","message":"Scheduling cron job with expression: 30 7 * * *","timestamp":"2025-02-17 11:50:16"}
+{"level":"info","message":"All cron jobs scheduled successfully.","timestamp":"2025-02-17 11:50:16"}
+{"level":"info","message":"Connected to the database.","timestamp":"2025-02-17 11:50:16"}
+{"level":"info","message":"Starting database seeding...","timestamp":"2025-02-17 11:50:16"}
+{"level":"info","message":"Starting gold price scraping...","timestamp":"2025-02-17 11:50:16"}
+{"level":"info","message":"Today's date: 2025-02-17","timestamp":"2025-02-17 11:50:16"}
+{"level":"info","message":"Last updated date: 2025-02-17","timestamp":"2025-02-17 11:50:16"}
+{"level":"info","message":"Gold prices are already up-to-date for today. Skipping update.","timestamp":"2025-02-17 11:50:16"}
+{"level":"info","message":"Checking if areaPrices collection is empty...","timestamp":"2025-02-17 11:50:16"}
+{"level":"info","message":"areaPrices collection already has data. Skipping data load.","timestamp":"2025-02-17 11:50:16"}
+{"level":"info","message":"Database seeding completed.","timestamp":"2025-02-17 11:50:16"}
+{"level":"info","message":"App listening at http://192.168.29.32:4100","timestamp":"2025-02-17 11:50:16"}
+{"level":"info","message":"Scheduling cron job with expression: 30 7 * * *","timestamp":"2025-02-17 11:50:56"}
+{"level":"info","message":"All cron jobs scheduled successfully.","timestamp":"2025-02-17 11:50:56"}
+{"level":"info","message":"Connected to the database.","timestamp":"2025-02-17 11:50:56"}
+{"level":"info","message":"Starting database seeding...","timestamp":"2025-02-17 11:50:56"}
+{"level":"info","message":"Starting gold price scraping...","timestamp":"2025-02-17 11:50:56"}
+{"level":"info","message":"Today's date: 2025-02-17","timestamp":"2025-02-17 11:50:56"}
+{"level":"info","message":"Last updated date: 2025-02-17","timestamp":"2025-02-17 11:50:56"}
+{"level":"info","message":"Gold prices are already up-to-date for today. Skipping update.","timestamp":"2025-02-17 11:50:56"}
+{"level":"info","message":"Checking if areaPrices collection is empty...","timestamp":"2025-02-17 11:50:56"}
+{"level":"info","message":"areaPrices collection already has data. Skipping data load.","timestamp":"2025-02-17 11:50:56"}
+{"level":"info","message":"Database seeding completed.","timestamp":"2025-02-17 11:50:56"}
+{"level":"info","message":"App listening at http://192.168.29.32:4100","timestamp":"2025-02-17 11:50:56"}
+{"level":"info","message":"Scheduling cron job with expression: 30 7 * * *","timestamp":"2025-02-17 11:51:20"}
+{"level":"info","message":"All cron jobs scheduled successfully.","timestamp":"2025-02-17 11:51:20"}
+{"level":"info","message":"Connected to the database.","timestamp":"2025-02-17 11:51:20"}
+{"level":"info","message":"Starting database seeding...","timestamp":"2025-02-17 11:51:20"}
+{"level":"info","message":"Starting gold price scraping...","timestamp":"2025-02-17 11:51:21"}
+{"level":"info","message":"Today's date: 2025-02-17","timestamp":"2025-02-17 11:51:21"}
+{"level":"info","message":"Last updated date: 2025-02-17","timestamp":"2025-02-17 11:51:21"}
+{"level":"info","message":"Gold prices are already up-to-date for today. Skipping update.","timestamp":"2025-02-17 11:51:21"}
+{"level":"info","message":"Checking if areaPrices collection is empty...","timestamp":"2025-02-17 11:51:21"}
+{"level":"info","message":"areaPrices collection already has data. Skipping data load.","timestamp":"2025-02-17 11:51:21"}
+{"level":"info","message":"Database seeding completed.","timestamp":"2025-02-17 11:51:21"}
+{"level":"info","message":"App listening at http://192.168.29.32:4200","timestamp":"2025-02-17 11:51:21"}
+{"level":"info","message":"Scheduling cron job with expression: 30 7 * * *","timestamp":"2025-02-17 11:54:28"}
+{"level":"info","message":"All cron jobs scheduled successfully.","timestamp":"2025-02-17 11:54:28"}
+{"level":"info","message":"Connected to the database.","timestamp":"2025-02-17 11:54:28"}
+{"level":"info","message":"Starting database seeding...","timestamp":"2025-02-17 11:54:28"}
+{"level":"info","message":"Starting gold price scraping...","timestamp":"2025-02-17 11:54:28"}
+{"level":"info","message":"Today's date: 2025-02-17","timestamp":"2025-02-17 11:54:28"}
+{"level":"info","message":"Last updated date: 2025-02-17","timestamp":"2025-02-17 11:54:28"}
+{"level":"info","message":"Gold prices are already up-to-date for today. Skipping update.","timestamp":"2025-02-17 11:54:28"}
+{"level":"info","message":"Checking if areaPrices collection is empty...","timestamp":"2025-02-17 11:54:28"}
+{"level":"info","message":"areaPrices collection already has data. Skipping data load.","timestamp":"2025-02-17 11:54:28"}
+{"level":"info","message":"Database seeding completed.","timestamp":"2025-02-17 11:54:28"}
+{"level":"info","message":"App listening at http://192.168.29.32:4200","timestamp":"2025-02-17 11:54:28"}
+{"level":"info","message":"Scheduling cron job with expression: 30 7 * * *","timestamp":"2025-02-17 11:55:57"}
+{"level":"info","message":"All cron jobs scheduled successfully.","timestamp":"2025-02-17 11:55:57"}
+{"level":"info","message":"Connected to the database.","timestamp":"2025-02-17 11:55:57"}
+{"level":"info","message":"Starting database seeding...","timestamp":"2025-02-17 11:55:57"}
+{"level":"info","message":"Starting gold price scraping...","timestamp":"2025-02-17 11:55:58"}
+{"level":"info","message":"Today's date: 2025-02-17","timestamp":"2025-02-17 11:55:58"}
+{"level":"info","message":"Last updated date: 2025-02-17","timestamp":"2025-02-17 11:55:58"}
+{"level":"info","message":"Gold prices are already up-to-date for today. Skipping update.","timestamp":"2025-02-17 11:55:58"}
+{"level":"info","message":"Checking if areaPrices collection is empty...","timestamp":"2025-02-17 11:55:58"}
+{"level":"info","message":"areaPrices collection already has data. Skipping data load.","timestamp":"2025-02-17 11:55:58"}
+{"level":"info","message":"Database seeding completed.","timestamp":"2025-02-17 11:55:58"}
+{"level":"info","message":"App listening at http://192.168.29.32:4200","timestamp":"2025-02-17 11:55:58"}
+{"level":"info","message":"Scheduling cron job with expression: 30 7 * * *","timestamp":"2025-02-17 12:09:12"}
+{"level":"info","message":"All cron jobs scheduled successfully.","timestamp":"2025-02-17 12:09:12"}
+{"level":"info","message":"Connected to the database.","timestamp":"2025-02-17 12:09:12"}
+{"level":"info","message":"Starting database seeding...","timestamp":"2025-02-17 12:09:12"}
+{"level":"info","message":"Starting gold price scraping...","timestamp":"2025-02-17 12:09:13"}
+{"level":"info","message":"Today's date: 2025-02-17","timestamp":"2025-02-17 12:09:13"}
+{"level":"info","message":"Last updated date: 2025-02-17","timestamp":"2025-02-17 12:09:13"}
+{"level":"info","message":"Gold prices are already up-to-date for today. Skipping update.","timestamp":"2025-02-17 12:09:13"}
+{"level":"info","message":"Checking if areaPrices collection is empty...","timestamp":"2025-02-17 12:09:13"}
+{"level":"info","message":"areaPrices collection already has data. Skipping data load.","timestamp":"2025-02-17 12:09:13"}
+{"level":"info","message":"Database seeding completed.","timestamp":"2025-02-17 12:09:13"}
+{"level":"info","message":"App listening at http://192.168.29.32:4200","timestamp":"2025-02-17 12:09:13"}
+{"level":"info","message":"Scheduling cron job with expression: 30 7 * * *","timestamp":"2025-02-17 12:11:31"}
+{"level":"info","message":"All cron jobs scheduled successfully.","timestamp":"2025-02-17 12:11:31"}
+{"level":"info","message":"Connected to the database.","timestamp":"2025-02-17 12:11:31"}
+{"level":"info","message":"Starting database seeding...","timestamp":"2025-02-17 12:11:31"}
+{"level":"info","message":"Starting gold price scraping...","timestamp":"2025-02-17 12:11:31"}
+{"level":"info","message":"Today's date: 2025-02-17","timestamp":"2025-02-17 12:11:31"}
+{"level":"info","message":"Last updated date: 2025-02-17","timestamp":"2025-02-17 12:11:31"}
+{"level":"info","message":"Gold prices are already up-to-date for today. Skipping update.","timestamp":"2025-02-17 12:11:31"}
+{"level":"info","message":"Checking if areaPrices collection is empty...","timestamp":"2025-02-17 12:11:31"}
+{"level":"info","message":"areaPrices collection already has data. Skipping data load.","timestamp":"2025-02-17 12:11:31"}
+{"level":"info","message":"Database seeding completed.","timestamp":"2025-02-17 12:11:31"}
+{"level":"info","message":"App listening at http://192.168.29.32:4200","timestamp":"2025-02-17 12:11:31"}
