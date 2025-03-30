@@ -4,29 +4,13 @@ const Schema = mongoose.Schema;
 
 const UserSchema = new Schema(
   {
-    userId: {
+    fullName: {
       type: String,
       trim: true,
-    },
-    firstName: {
-      type: String,
-      trim: true,
-    },
-    lastName: {
-      type: String,
-      trim: true,
-    },
-    phoneNo: {
-      type: Number,
-      unique: true,
     },
     email: {
       type: String,
       unique: true,
-    },
-    is_admin: {
-      type: Boolean,
-      default: false,
     },
     password: {
       type: String,

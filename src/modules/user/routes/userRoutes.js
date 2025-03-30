@@ -6,16 +6,11 @@ import {
 } from "../../../middlewares/authValidator.js";
 
 import {
-  changePassword,
   deleteUser,
-  forgotPassword,
   getUser,
-  getUsers,
   loginUser,
   logoutUser,
-  newPassword,
   registerUser,
-  resetPassword,
   updateUser,
 } from "../controller/usercontroller.js";
 import {
@@ -44,14 +39,5 @@ Router.put(
 
 // User Management Routes
 Router.delete("/user/delete/:id", ensureAuthenticated, deleteUser);
-Router.post("/user/changepassword", ensureAuthenticated, changePassword);
-
-// Password Recovery Routes
-Router.post("/forgot-password", forgotPassword);
-Router.post("/reset-password", resetPassword);
-Router.post("/newpassword", newPassword);
-
-// Admin Routes
-Router.get("/users", ensureAuthenticated, ensureAdmin, getUsers);
 
 export default Router;

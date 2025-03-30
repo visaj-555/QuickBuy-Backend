@@ -10,7 +10,7 @@ export const userRegisterValidate = (req, res, next) => {
     confirmPassword: Joi.string().optional(),
     image: Joi.string().optional(),
 
-    firstName: Joi.string()
+    fullName: Joi.string()
       .min(2)
       .max(50)
       .when("$isUpdating", {
@@ -24,34 +24,6 @@ export const userRegisterValidate = (req, res, next) => {
         "string.min": "First name should be at least 2 characters",
         "string.max": "First name should be at most 50 characters",
         "any.required": "First name is required",
-      }),
-    lastName: Joi.string()
-      .min(3)
-      .max(50)
-      .when("$isUpdating", {
-        is: true,
-        then: Joi.optional(),
-        otherwise: Joi.required(),
-      })
-      .messages({
-        "string.base": "Last name should be a type of string",
-        "string.empty": "Last name cannot be empty",
-        "string.min": "Last name should be at least 3 characters",
-        "string.max": "Last name should be at most 50 characters",
-        "any.required": "Last name is required",
-      }),
-    phoneNo: Joi.string()
-      .length(10)
-      .pattern(/^[0-9]+$/)
-      .when("$isUpdating", {
-        is: true,
-        then: Joi.optional(),
-        otherwise: Joi.required(),
-      })
-      .messages({
-        "string.length": "Phone number should be exactly 10 digits",
-        "string.pattern.base": "Phone number should contain only digits",
-        "any.required": "Phone number is required",
       }),
     email: Joi.string()
       .email()

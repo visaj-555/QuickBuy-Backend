@@ -114,3 +114,43 @@
 {"level":"info","message":"areaPrices collection already has data. Skipping data load.","timestamp":"2025-02-17 12:11:31"}
 {"level":"info","message":"Database seeding completed.","timestamp":"2025-02-17 12:11:31"}
 {"level":"info","message":"App listening at http://192.168.29.32:4200","timestamp":"2025-02-17 12:11:31"}
+{"level":"info","message":"Connected to the database.","timestamp":"2025-03-30 10:27:08"}
+{"level":"info","message":"Starting database seeding...","timestamp":"2025-03-30 10:27:08"}
+{"level":"error","message":"Error inserting admin user: UserModel is not defined","timestamp":"2025-03-30 10:27:08"}
+{"level":"info","message":"Database seeding completed.","timestamp":"2025-03-30 10:27:08"}
+{"level":"info","message":"App listening at http://localhost:4200","timestamp":"2025-03-30 10:27:08"}
+{"level":"info","message":"Connected to the database.","timestamp":"2025-03-30 10:27:41"}
+{"level":"info","message":"Starting database seeding...","timestamp":"2025-03-30 10:27:41"}
+{"level":"info","message":"Database seeding completed.","timestamp":"2025-03-30 10:27:41"}
+{"level":"info","message":"App listening at http://localhost:4200","timestamp":"2025-03-30 10:27:41"}
+{"level":"info","message":"Connected to the database.","timestamp":"2025-03-30 10:28:19"}
+{"level":"info","message":"Starting database seeding...","timestamp":"2025-03-30 10:28:19"}
+{"level":"info","message":"Admin added succesfully","timestamp":"2025-03-30 10:28:19"}
+{"level":"info","message":"App listening at http://localhost:4200","timestamp":"2025-03-30 10:28:19"}
+{"level":"info","message":"Connected to the database.","timestamp":"2025-03-30 10:29:27"}
+{"level":"info","message":"Starting database seeding...","timestamp":"2025-03-30 10:29:27"}
+{"level":"info","message":"Admin added succesfully","timestamp":"2025-03-30 10:29:27"}
+{"level":"info","message":"App listening at http://localhost:4200","timestamp":"2025-03-30 10:29:27"}
+{"level":"info","message":"Connected to the database.","timestamp":"2025-03-30 10:29:54"}
+{"level":"info","message":"Starting database seeding...","timestamp":"2025-03-30 10:29:54"}
+{"level":"info","message":"Admin added succesfully","timestamp":"2025-03-30 10:29:54"}
+{"level":"info","message":"App listening at http://localhost:4200","timestamp":"2025-03-30 10:29:54"}
+{"level":"info","message":"Connected to the database.","timestamp":"2025-03-30 10:30:15"}
+{"level":"info","message":"Starting database seeding...","timestamp":"2025-03-30 10:30:15"}
+{"level":"info","message":"Admin added succesfully","timestamp":"2025-03-30 10:30:15"}
+{"level":"info","message":"App listening at http://localhost:4200","timestamp":"2025-03-30 10:30:15"}
+{"level":"error","message":"Error registering user: phoneNo is not defined","timestamp":"2025-03-30 10:30:22"}
+{"level":"info","message":"Connected to the database.","timestamp":"2025-03-30 10:30:34"}
+{"level":"info","message":"Starting database seeding...","timestamp":"2025-03-30 10:30:34"}
+{"level":"info","message":"Admin added succesfully","timestamp":"2025-03-30 10:30:35"}
+{"level":"info","message":"App listening at http://localhost:4200","timestamp":"2025-03-30 10:30:35"}
+{"level":"info","message":"Connected to the database.","timestamp":"2025-03-30 10:30:42"}
+{"level":"info","message":"Starting database seeding...","timestamp":"2025-03-30 10:30:42"}
+{"level":"info","message":"Admin added succesfully","timestamp":"2025-03-30 10:30:42"}
+{"level":"info","message":"App listening at http://localhost:4200","timestamp":"2025-03-30 10:30:42"}
+{"level":"error","message":"Error registering user: E11000 duplicate key error collection: investment.users index: phoneNo_1 dup key: { phoneNo: null }","timestamp":"2025-03-30 10:30:46"}
+{"level":"info","message":"Connected to the database.","timestamp":"2025-03-30 10:31:41"}
+{"level":"info","message":"Starting database seeding...","timestamp":"2025-03-30 10:31:41"}
+{"level":"info","message":"Admin user seeded successfully.","timestamp":"2025-03-30 10:31:42"}
+{"level":"info","message":"Admin added succesfully","timestamp":"2025-03-30 10:31:42"}
+{"level":"info","message":"App listening at http://localhost:4200","timestamp":"2025-03-30 10:31:42"}

@@ -82,7 +82,7 @@ const runSeeder = async () => {
   try {
     logger.info("Starting database seeding...");
     await seedDatabase();
-    logger.info("Database seeding completed.");
+    logger.info("Admin added succesfully");
   } catch (error) {
     logger.error(`Error during seeding: ${error.message}`);
   }

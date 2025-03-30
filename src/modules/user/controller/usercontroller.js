@@ -10,7 +10,7 @@ import mongoose from "mongoose";
 
 export const registerUser = async (req, res) => {
   try {
-    const { firstName, lastName, phoneNo, email, password } = req.body;
+    const { fullName, email, password } = req.body;
 
     const userExists = await UserModel.findOne({ email });
 
@@ -21,21 +21,11 @@ export const registerUser = async (req, res) => {
       });
     }
 
-    const phoneNoExists = await UserModel.findOne({ phoneNo });
-    if (phoneNoExists) {
-      return res.status(statusCode.BAD_REQUEST).json({
-        statusCode: statusCode.BAD_REQUEST,
-        message: message.phoneNoExists,
-      });
-    }
-
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
     const newUser = new UserModel({
-      firstName,
-      lastName,
-      phoneNo,
+      fullName,
       email,
       password: hashedPassword,
     });
@@ -227,57 +217,6 @@ export const deleteUser = async (req, res) => {
   }
 };
 
-//====================== CHANGE PASSWORD ======================//
-export const changePassword = async (req, res) => {
-  try {
-    const { oldPassword, newPassword, confirmPassword } = req.body;
-    const userId = req.user.id;
-
-    const user = await UserModel.findById(userId);
-    if (!user) {
-      return res.status(statusCode.NOT_FOUND).json({
-        statusCode: statusCode.NOT_FOUND,
-        message: message.userNotFound,
-      });
-    }
-
-    const isMatch = await bcrypt.compare(oldPassword, user.password);
-    if (!isMatch) {
-      return res.status(statusCode.BAD_REQUEST).json({
-        statusCode: statusCode.BAD_REQUEST,
-        message: message.incorrectOldPassword,
-      });
-    }
-
-    if (newPassword !== confirmPassword) {
-      return res.status(statusCode.BAD_REQUEST).json({
-        statusCode: statusCode.BAD_REQUEST,
-        message: message.passwordNotMatch,
-      });
-    }
-
-    const salt = await bcrypt.genSalt(10);
-    const hashedPassword = await bcrypt.hash(newPassword, salt);
-
-    user.password = hashedPassword;
-    await user.save();
-
-    await TokenModel.deleteMany({ userId: userId });
-
-    res
-      .status(statusCode.OK)
-      .json({ statusCode: statusCode.OK, message: message.passwordChanged });
-  } catch (err) {
-    logger.error(
-      `Error changing password for user ${req.user.id}: ${err.message}`
-    );
-    res.status(statusCode.INTERNAL_SERVER_ERROR).json({
-      statusCode: statusCode.INTERNAL_SERVER_ERROR,
-      message: message.passwordChangeError,
-    });
-  }
-};
-
 //====================== LOGOUT USER ======================//
 
 export const logoutUser = async (req, res) => {
@@ -315,44 +254,6 @@ export const logoutUser = async (req, res) => {
     res.status(statusCode.INTERNAL_SERVER_ERROR).json({
       statusCode: statusCode.INTERNAL_SERVER_ERROR,
       message: message.errorLogout,
-    });
-  }
-};
-
-//====================== VIEW ALL USERS ======================//
-
-export const getUsers = async (req, res) => {
-  try {
-    let page = req.query.page || 1;
-    let limit = req.query.limit || 10;
-
-    let offset = (page - 1) * limit;
-
-    const users = await UserModel.find({}, { password: 0 })
-      .sort({
-        createdAt: 1,
-      })
-      .skip(offset)
-      .limit(limit)
-      .exec();
-
-    const usersWithSrNo = users.map((user, index) => ({
-      srNo: index + 1,
-      user,
-    }));
-
-    res.status(statusCode.OK).json({
-      statusCode: statusCode.OK,
-      message: message.usersView,
-      data: usersWithSrNo,
-      total: await UserModel.countDocuments(),
-    });
-  } catch (error) {
-    logger.error(`Error fetching users: ${error.message}`);
-    res.status(statusCode.INTERNAL_SERVER_ERROR).json({
-      statusCode: statusCode.INTERNAL_SERVER_ERROR,
-      message: message.errorFetchingUsers,
-      error: error.message || error,
     });
   }
 };

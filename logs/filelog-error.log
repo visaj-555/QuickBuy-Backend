@@ -1,0 +1,3 @@
+{"level":"error","message":"Error inserting admin user: UserModel is not defined","timestamp":"2025-03-30 10:27:08"}
+{"level":"error","message":"Error registering user: phoneNo is not defined","timestamp":"2025-03-30 10:30:22"}
+{"level":"error","message":"Error registering user: E11000 duplicate key error collection: investment.users index: phoneNo_1 dup key: { phoneNo: null }","timestamp":"2025-03-30 10:30:46"}

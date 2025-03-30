@@ -1,5 +1,6 @@
 import logger from "../service/logger.service.js";
 import bcrypt from "bcrypt";
+import UserModel from "../modules/user/model/userModel.js";
 
 export const insertAdminUser = async () => {
   try {
