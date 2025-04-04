@@ -3,3 +3,4 @@ node_modules/
 cronPattern.txt
 
 
+.env
