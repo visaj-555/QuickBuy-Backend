@@ -70,9 +70,9 @@ const databaseConnection = async () => {
     await mongoose.connect(DB_CONNECTION, {
       serverSelectionTimeoutMS: 5000,
     });
-    logger.info("Connected to the database.");
+    console.log("Connected to the database.");
   } catch (error) {
-    logger.error(`Database connection failed: ${error.message}`);
+    console.log(`Database connection failed: ${error.message}`);
     process.exit(1);
   }
 };
@@ -80,9 +80,9 @@ const databaseConnection = async () => {
 // Run Seeder on Startup
 const runSeeder = async () => {
   try {
-    logger.info("Starting database seeding...");
+    console.log("Starting database seeding...");
     await seedDatabase();
-    logger.info("Admin added succesfully");
+    console.log("Admin added succesfully");
   } catch (error) {
     logger.error(`Error during seeding: ${error.message}`);
   }
@@ -92,7 +92,7 @@ app.listen(PORT, async () => {
   try {
     await databaseConnection();
     await runSeeder();
-    logger.info(`App listening at http://${HOST}:${PORT}`);
+    console.log(`App listening at http://${HOST}:${PORT}`);
   } catch (error) {
     logger.error(`Failed to start application: ${error.message}`);
   }

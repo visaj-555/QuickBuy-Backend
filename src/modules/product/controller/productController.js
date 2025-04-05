@@ -1,28 +1,50 @@
-import ProductModel from "../models/ProductModel.js";
-import statusCode from "../constants/statusCode.js";
-import message from "../constants/message.js";
-import logger from "../utils/logger.js";
+import ProductModel from "../model/productModel.js";
+import { statusCode, message } from "../../../utils/api.response.js";
+import logger from "../../../service/logger.service.js";
 
 export const addProduct = async (req, res) => {
   try {
+    // Handle image validation
+    if (req.fileValidationError) {
+      return res.status(statusCode.BAD_REQUEST).json({
+        statusCode: statusCode.BAD_REQUEST,
+        message: "Please upload valid image files (jpeg/jpg/png).",
+      });
+    }
+
+    if (req.fileSizeLimitError) {
+      return res.status(statusCode.BAD_REQUEST).json({
+        statusCode: statusCode.BAD_REQUEST,
+        message: "Each file size should be less than 5 MB.",
+      });
+    }
+
     const {
       productName,
       rating,
       colors,
       highlights,
-      productImages,
       finalProductPrice,
       productPrice,
       productBrand,
       category,
     } = req.body;
 
+    // Convert stringified arrays (from form-data) into actual arrays
+    const colorArray = typeof colors === "string" ? JSON.parse(colors) : colors;
+    const highlightArray =
+      typeof highlights === "string" ? JSON.parse(highlights) : highlights;
+
+    const imagePaths = req.files
+      ? req.files.map((file) => file.path.replace(/\\/g, "/"))
+      : [];
+
     const newProduct = new ProductModel({
       productName,
       rating,
-      colors,
-      highlights,
-      productImages,
+      colors: colorArray,
+      highlights: highlightArray,
+      productImages: imagePaths,
       finalProductPrice,
       productPrice,
       productBrand,
@@ -40,7 +62,7 @@ export const addProduct = async (req, res) => {
     logger.error(`Error adding product: ${error.message}`);
     res.status(statusCode.INTERNAL_SERVER_ERROR).json({
       statusCode: statusCode.INTERNAL_SERVER_ERROR,
-      message: message.errorAddingProduct,
+      message: message.INTERNAL_SERVER_ERROR,
     });
   }
 };

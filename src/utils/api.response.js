@@ -49,6 +49,8 @@ export const message = {
   deleteUserError: "Error Deleting user",
   errorFetchingUsers: "Error Fetching users",
 
+  productAdded: "Added Product",
+
   // Miscellaneous Errors
   INTERNAL_SERVER_ERROR: "Something went wrong",
   deleteAuth: "You are unauthorized to delete this account",

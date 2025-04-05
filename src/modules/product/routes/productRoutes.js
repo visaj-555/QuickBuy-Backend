@@ -1,9 +1,17 @@
 import express from "express";
-import { addProduct, getProducts } from "../controller/productController";
+import { addProduct, getProducts } from "../controller/productController.js";
+import { uploadProductImages } from "../../../middlewares/upload.js"; // Import the correct upload middleware
 
 const Router = express.Router();
 
-Router.post("/product/add", addProduct);
+// Route to add a product with file uploads
+Router.post(
+  "/product/add",
+  uploadProductImages.array("productImages"),
+  addProduct
+);
+
+// Route to view product(s)
 Router.get("/product/view", getProducts);
 
 export default Router;
