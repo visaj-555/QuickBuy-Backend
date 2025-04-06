@@ -1,0 +1,850 @@
+{
+  "products": [
+    {
+      "productName": "iPhone 15 Pro Max",
+      "rating": 4.8,
+      "colors": [
+        "Titanium Blue",
+        "Natural Titanium",
+        "White Titanium",
+        "Black Titanium"
+      ],
+      "highlights": [
+        "A17 Pro Bionic Chip",
+        "48MP Main Camera",
+        "6.7-inch Super Retina XDR display",
+        "ProMotion technology with adaptive refresh rates",
+        "Ceramic Shield front"
+      ],
+      "productImages": [
+        "iphone15_pro_max_1.jpg",
+        "iphone15_pro_max_2.jpg",
+        "iphone15_pro_max_3.jpg"
+      ],
+      "finalProductPrice": 159999,
+      "productPrice": 169999,
+      "productBrand": "Apple",
+      "category": "mobile"
+    },
+    {
+      "productName": "Samsung Galaxy S24 Ultra",
+      "rating": 4.7,
+      "colors": [
+        "Titanium Black",
+        "Titanium Gray",
+        "Titanium Violet",
+        "Titanium Yellow"
+      ],
+      "highlights": [
+        "Snapdragon 8 Gen 3 processor",
+        "200MP main camera",
+        "6.8-inch Dynamic AMOLED 2X",
+        "S Pen included",
+        "5000mAh battery"
+      ],
+      "productImages": [
+        "galaxy_s24_ultra_1.jpg",
+        "galaxy_s24_ultra_2.jpg",
+        "galaxy_s24_ultra_3.jpg"
+      ],
+      "finalProductPrice": 129999,
+      "productPrice": 139999,
+      "productBrand": "Samsung",
+      "category": "mobile"
+    },
+    {
+      "productName": "MacBook Pro 16-inch",
+      "rating": 4.9,
+      "colors": ["Space Gray", "Silver"],
+      "highlights": [
+        "M3 Max chip",
+        "32GB unified memory",
+        "1TB SSD storage",
+        "16-inch Liquid Retina XDR display",
+        "Up to 22 hours battery life"
+      ],
+      "productImages": [
+        "macbook_pro_16_1.jpg",
+        "macbook_pro_16_2.jpg",
+        "macbook_pro_16_3.jpg"
+      ],
+      "finalProductPrice": 249999,
+      "productPrice": 269999,
+      "productBrand": "Apple",
+      "category": "laptop"
+    },
+    {
+      "productName": "Dell XPS 15",
+      "rating": 4.6,
+      "colors": ["Platinum Silver", "Frost White"],
+      "highlights": [
+        "13th Gen Intel Core i9 processor",
+        "32GB RAM",
+        "1TB SSD",
+        "15.6-inch 4K OLED display",
+        "NVIDIA GeForce RTX 4070"
+      ],
+      "productImages": [
+        "dell_xps_15_1.jpg",
+        "dell_xps_15_2.jpg",
+        "dell_xps_15_3.jpg"
+      ],
+      "finalProductPrice": 215999,
+      "productPrice": 229999,
+      "productBrand": "Dell",
+      "category": "laptop"
+    },
+    {
+      "productName": "Apple Watch Series 9",
+      "rating": 4.7,
+      "colors": ["Midnight", "Starlight", "Silver", "Product RED"],
+      "highlights": [
+        "Always-On Retina display",
+        "S9 chip",
+        "ECG app",
+        "Water resistant to 50 meters",
+        "Up to 18 hours of battery life"
+      ],
+      "productImages": [
+        "apple_watch_s9_1.jpg",
+        "apple_watch_s9_2.jpg",
+        "apple_watch_s9_3.jpg"
+      ],
+      "finalProductPrice": 39999,
+      "productPrice": 44999,
+      "productBrand": "Apple",
+      "category": "smartWatch"
+    },
+    {
+      "productName": "Samsung Galaxy Watch 6",
+      "rating": 4.5,
+      "colors": ["Graphite", "Gold", "Silver"],
+      "highlights": [
+        "BioActive Sensor",
+        "Advanced sleep coaching",
+        "Auto workout detection",
+        "40mm Super AMOLED display",
+        "Sapphire Crystal"
+      ],
+      "productImages": [
+        "galaxy_watch6_1.jpg",
+        "galaxy_watch6_2.jpg",
+        "galaxy_watch6_3.jpg"
+      ],
+      "finalProductPrice": 27999,
+      "productPrice": 32999,
+      "productBrand": "Samsung",
+      "category": "smartWatch"
+    },
+    {
+      "productName": "LG C4 OLED TV 65-inch",
+      "rating": 4.8,
+      "colors": ["Black"],
+      "highlights": [
+        "OLED evo technology",
+        "4K resolution",
+        "Dolby Vision & Atmos",
+        "HDMI 2.1 for gaming",
+        "webOS smart platform"
+      ],
+      "productImages": [
+        "lg_c4_oled_1.jpg",
+        "lg_c4_oled_2.jpg",
+        "lg_c4_oled_3.jpg"
+      ],
+      "finalProductPrice": 179999,
+      "productPrice": 199999,
+      "productBrand": "LG",
+      "category": "tv"
+    },
+    {
+      "productName": "Sony Bravia XR A95L",
+      "rating": 4.9,
+      "colors": ["Black"],
+      "highlights": [
+        "QD-OLED display",
+        "Cognitive Processor XR",
+        "4K 120Hz",
+        "Google TV",
+        "Acoustic Surface Audio+"
+      ],
+      "productImages": [
+        "sony_a95l_1.jpg",
+        "sony_a95l_2.jpg",
+        "sony_a95l_3.jpg"
+      ],
+      "finalProductPrice": 269999,
+      "productPrice": 299999,
+      "productBrand": "Sony",
+      "category": "tv"
+    },
+    {
+      "productName": "iPad Pro 12.9",
+      "rating": 4.8,
+      "colors": ["Space Gray", "Silver"],
+      "highlights": [
+        "M2 chip",
+        "12.9-inch Liquid Retina XDR display",
+        "ProMotion technology",
+        "12MP Wide camera",
+        "All-day battery life"
+      ],
+      "productImages": [
+        "ipad_pro_12_1.jpg",
+        "ipad_pro_12_2.jpg",
+        "ipad_pro_12_3.jpg"
+      ],
+      "finalProductPrice": 119999,
+      "productPrice": 129999,
+      "productBrand": "Apple",
+      "category": "tablet"
+    },
+    {
+      "productName": "Samsung Galaxy Tab S9 Ultra",
+      "rating": 4.7,
+      "colors": ["Graphite", "Beige"],
+      "highlights": [
+        "14.6-inch Dynamic AMOLED 2X",
+        "Snapdragon 8 Gen 2 for Galaxy",
+        "S Pen included",
+        "12GB RAM, 256GB storage",
+        "11200mAh battery"
+      ],
+      "productImages": [
+        "galaxy_tab_s9_ultra_1.jpg",
+        "galaxy_tab_s9_ultra_2.jpg",
+        "galaxy_tab_s9_ultra_3.jpg"
+      ],
+      "finalProductPrice": 104999,
+      "productPrice": 114999,
+      "productBrand": "Samsung",
+      "category": "tablet"
+    },
+    {
+      "productName": "Google Pixel 8 Pro",
+      "rating": 4.6,
+      "colors": ["Obsidian", "Porcelain", "Bay"],
+      "highlights": [
+        "Google Tensor G3 chip",
+        "50MP main camera",
+        "6.7-inch Super Actua display",
+        "Adaptive Battery",
+        "7 years of updates"
+      ],
+      "productImages": [
+        "pixel_8_pro_1.jpg",
+        "pixel_8_pro_2.jpg",
+        "pixel_8_pro_3.jpg"
+      ],
+      "finalProductPrice": 92999,
+      "productPrice": 99999,
+      "productBrand": "Google",
+      "category": "mobile"
+    },
+    {
+      "productName": "Xiaomi 14 Ultra",
+      "rating": 4.5,
+      "colors": ["Black", "White"],
+      "highlights": [
+        "Snapdragon 8 Gen 3",
+        "50MP Leica quad camera",
+        "6.73-inch AMOLED display",
+        "5000mAh battery",
+        "120W fast charging"
+      ],
+      "productImages": [
+        "xiaomi_14_ultra_1.jpg",
+        "xiaomi_14_ultra_2.jpg",
+        "xiaomi_14_ultra_3.jpg"
+      ],
+      "finalProductPrice": 87999,
+      "productPrice": 94999,
+      "productBrand": "Xiaomi",
+      "category": "mobile"
+    },
+    {
+      "productName": "Asus ROG Zephyrus G16",
+      "rating": 4.7,
+      "colors": ["Eclipse Gray", "Platinum White"],
+      "highlights": [
+        "Intel Core i9-14900H",
+        "NVIDIA GeForce RTX 4080",
+        "16-inch QHD+ display",
+        "32GB DDR5 RAM",
+        "2TB NVMe SSD"
+      ],
+      "productImages": [
+        "rog_zephyrus_g16_1.jpg",
+        "rog_zephyrus_g16_2.jpg",
+        "rog_zephyrus_g16_3.jpg"
+      ],
+      "finalProductPrice": 229999,
+      "productPrice": 249999,
+      "productBrand": "Asus",
+      "category": "laptop"
+    },
+    {
+      "productName": "Lenovo ThinkPad X1 Carbon Gen 11",
+      "rating": 4.6,
+      "colors": ["Black"],
+      "highlights": [
+        "Intel Core i7-1370P",
+        "16GB LPDDR5 RAM",
+        "1TB SSD",
+        "14-inch WUXGA display",
+        "Up to 15 hours battery life"
+      ],
+      "productImages": [
+        "thinkpad_x1_carbon_1.jpg",
+        "thinkpad_x1_carbon_2.jpg",
+        "thinkpad_x1_carbon_3.jpg"
+      ],
+      "finalProductPrice": 152999,
+      "productPrice": 164999,
+      "productBrand": "Lenovo",
+      "category": "laptop"
+    },
+    {
+      "productName": "Samsung QN90C Neo QLED 75-inch",
+      "rating": 4.7,
+      "colors": ["Titan Black"],
+      "highlights": [
+        "Neo Quantum Processor 4K",
+        "Quantum Matrix Technology",
+        "Anti-glare screen",
+        "Object Tracking Sound+",
+        "Gaming Hub"
+      ],
+      "productImages": [
+        "samsung_qn90c_1.jpg",
+        "samsung_qn90c_2.jpg",
+        "samsung_qn90c_3.jpg"
+      ],
+      "finalProductPrice": 229999,
+      "productPrice": 249999,
+      "productBrand": "Samsung",
+      "category": "tv"
+    },
+    {
+      "productName": "TCL 55-inch C845 Mini LED",
+      "rating": 4.4,
+      "colors": ["Black"],
+      "highlights": [
+        "Mini LED technology",
+        "4K HDR Premium",
+        "144Hz refresh rate",
+        "Google TV",
+        "ONKYO audio system"
+      ],
+      "productImages": ["tcl_c845_1.jpg", "tcl_c845_2.jpg", "tcl_c845_3.jpg"],
+      "finalProductPrice": 74999,
+      "productPrice": 84999,
+      "productBrand": "TCL",
+      "category": "tv"
+    },
+    {
+      "productName": "Garmin Fenix 7X Sapphire Solar",
+      "rating": 4.8,
+      "colors": ["Black", "Mineral Blue"],
+      "highlights": [
+        "Solar charging lens",
+        "Real-time stamina",
+        "Up to 37 days battery life",
+        "Multi-band GPS",
+        "TopoActive maps"
+      ],
+      "productImages": [
+        "garmin_fenix_7x_1.jpg",
+        "garmin_fenix_7x_2.jpg",
+        "garmin_fenix_7x_3.jpg"
+      ],
+      "finalProductPrice": 89999,
+      "productPrice": 94999,
+      "productBrand": "Garmin",
+      "category": "smartWatch"
+    },
+    {
+      "productName": "OnePlus 12",
+      "rating": 4.6,
+      "colors": ["Flowy Emerald", "Silky Black"],
+      "highlights": [
+        "Snapdragon 8 Gen 3",
+        "6.82-inch 120Hz LTPO AMOLED",
+        "50MP Hasselblad camera",
+        "5400mAh battery",
+        "100W SUPERVOOC charging"
+      ],
+      "productImages": [
+        "oneplus_12_1.jpg",
+        "oneplus_12_2.jpg",
+        "oneplus_12_3.jpg"
+      ],
+      "finalProductPrice": 64999,
+      "productPrice": 69999,
+      "productBrand": "OnePlus",
+      "category": "mobile"
+    },
+    {
+      "productName": "Microsoft Surface Pro 10",
+      "rating": 4.5,
+      "colors": ["Platinum", "Graphite", "Sapphire"],
+      "highlights": [
+        "Intel Core Ultra 7",
+        "13-inch 120Hz PixelSense Flow",
+        "16GB RAM",
+        "512GB SSD",
+        "Enhanced Copilot features"
+      ],
+      "productImages": [
+        "surface_pro_10_1.jpg",
+        "surface_pro_10_2.jpg",
+        "surface_pro_10_3.jpg"
+      ],
+      "finalProductPrice": 129999,
+      "productPrice": 139999,
+      "productBrand": "Microsoft",
+      "category": "tablet"
+    },
+    {
+      "productName": "Apple AirPods Pro 2",
+      "rating": 4.7,
+      "colors": ["White"],
+      "highlights": [
+        "Active Noise Cancellation",
+        "Adaptive Transparency",
+        "Personalized Spatial Audio",
+        "USB-C charging case",
+        "Up to 6 hours listening time"
+      ],
+      "productImages": [
+        "airpods_pro_2_1.jpg",
+        "airpods_pro_2_2.jpg",
+        "airpods_pro_2_3.jpg"
+      ],
+      "finalProductPrice": 24999,
+      "productPrice": 27999,
+      "productBrand": "Apple",
+      "category": "accessory"
+    },
+    {
+      "productName": "Sony WH-1000XM5",
+      "rating": 4.8,
+      "colors": ["Black", "Silver", "Midnight Blue"],
+      "highlights": [
+        "Industry-leading noise cancellation",
+        "8 microphones with Auto NC Optimizer",
+        "30-hour battery life",
+        "LDAC audio coding",
+        "Speak-to-chat technology"
+      ],
+      "productImages": [
+        "sony_wh1000xm5_1.jpg",
+        "sony_wh1000xm5_2.jpg",
+        "sony_wh1000xm5_3.jpg"
+      ],
+      "finalProductPrice": 29999,
+      "productPrice": 34999,
+      "productBrand": "Sony",
+      "category": "accessory"
+    },
+    {
+      "productName": "Nothing Phone 2",
+      "rating": 4.4,
+      "colors": ["Dark Gray", "White"],
+      "highlights": [
+        "Snapdragon 8+ Gen 1",
+        "Glyph Interface",
+        "6.7-inch OLED display",
+        "50MP dual camera",
+        "4700mAh battery"
+      ],
+      "productImages": [
+        "nothing_phone_2_1.jpg",
+        "nothing_phone_2_2.jpg",
+        "nothing_phone_2_3.jpg"
+      ],
+      "finalProductPrice": 44999,
+      "productPrice": 49999,
+      "productBrand": "Nothing",
+      "category": "mobile"
+    },
+    {
+      "productName": "HP Spectre x360 14",
+      "rating": 4.6,
+      "colors": ["Nightfall Black", "Poseidon Blue"],
+      "highlights": [
+        "Intel Core Ultra 7 processor",
+        "14-inch OLED touchscreen",
+        "16GB RAM",
+        "1TB SSD",
+        "360° hinge design"
+      ],
+      "productImages": [
+        "hp_spectre_x360_1.jpg",
+        "hp_spectre_x360_2.jpg",
+        "hp_spectre_x360_3.jpg"
+      ],
+      "finalProductPrice": 154999,
+      "productPrice": 164999,
+      "productBrand": "HP",
+      "category": "laptop"
+    },
+    {
+      "productName": "Fitbit Sense 2",
+      "rating": 4.3,
+      "colors": ["Graphite", "Platinum", "Copper Rose"],
+      "highlights": [
+        "cEDA sensor for stress management",
+        "ECG app",
+        "6+ days battery life",
+        "Built-in GPS",
+        "Skin temperature sensor"
+      ],
+      "productImages": [
+        "fitbit_sense_2_1.jpg",
+        "fitbit_sense_2_2.jpg",
+        "fitbit_sense_2_3.jpg"
+      ],
+      "finalProductPrice": 22999,
+      "productPrice": 27999,
+      "productBrand": "Fitbit",
+      "category": "smartWatch"
+    },
+    {
+      "productName": "Hisense 65U8K Mini LED",
+      "rating": 4.5,
+      "colors": ["Black"],
+      "highlights": [
+        "Mini LED Pro technology",
+        "144Hz refresh rate",
+        "QLED Quantum Dot",
+        "Google TV",
+        "Dolby Vision IQ"
+      ],
+      "productImages": [
+        "hisense_u8k_1.jpg",
+        "hisense_u8k_2.jpg",
+        "hisense_u8k_3.jpg"
+      ],
+      "finalProductPrice": 119999,
+      "productPrice": 129999,
+      "productBrand": "Hisense",
+      "category": "tv"
+    },
+    {
+      "productName": "Lenovo Tab P12 Pro",
+      "rating": 4.4,
+      "colors": ["Storm Gray"],
+      "highlights": [
+        "12.6-inch AMOLED display",
+        "Snapdragon 870",
+        "8GB RAM",
+        "256GB storage",
+        "Lenovo Precision Pen 3"
+      ],
+      "productImages": [
+        "lenovo_tab_p12_pro_1.jpg",
+        "lenovo_tab_p12_pro_2.jpg",
+        "lenovo_tab_p12_pro_3.jpg"
+      ],
+      "finalProductPrice": 49999,
+      "productPrice": 54999,
+      "productBrand": "Lenovo",
+      "category": "tablet"
+    },
+    {
+      "productName": "Vivo X100 Pro",
+      "rating": 4.6,
+      "colors": ["Asteroid Black", "Silk Blue"],
+      "highlights": [
+        "MediaTek Dimensity 9300",
+        "50MP Zeiss V2 camera system",
+        "6.78-inch curved AMOLED",
+        "5400mAh battery",
+        "120W FlashCharge"
+      ],
+      "productImages": [
+        "vivo_x100_pro_1.jpg",
+        "vivo_x100_pro_2.jpg",
+        "vivo_x100_pro_3.jpg"
+      ],
+      "finalProductPrice": 79999,
+      "productPrice": 84999,
+      "productBrand": "Vivo",
+      "category": "mobile"
+    },
+    {
+      "productName": "Bose QuietComfort Ultra",
+      "rating": 4.8,
+      "colors": ["Black", "White Smoke", "Cypress Green"],
+      "highlights": [
+        "Advanced noise cancellation",
+        "CustomTune technology",
+        "Spatial audio",
+        "24-hour battery life",
+        "Aware Mode with ActiveSense"
+      ],
+      "productImages": [
+        "bose_qc_ultra_1.jpg",
+        "bose_qc_ultra_2.jpg",
+        "bose_qc_ultra_3.jpg"
+      ],
+      "finalProductPrice": 32999,
+      "productPrice": 36999,
+      "productBrand": "Bose",
+      "category": "accessory"
+    },
+    {
+      "productName": "MSI Stealth 16 Mercedes-AMG",
+      "rating": 4.7,
+      "colors": ["Selenite Grey"],
+      "highlights": [
+        "Intel Core i9-14900HX",
+        "NVIDIA GeForce RTX 4090",
+        "16-inch OLED display",
+        "64GB DDR5 RAM",
+        "2TB NVMe SSD"
+      ],
+      "productImages": [
+        "msi_stealth_16_1.jpg",
+        "msi_stealth_16_2.jpg",
+        "msi_stealth_16_3.jpg"
+      ],
+      "finalProductPrice": 324999,
+      "productPrice": 349999,
+      "productBrand": "MSI",
+      "category": "laptop"
+    },
+    {
+      "productName": "Philips Ambilight OLED 908",
+      "rating": 4.6,
+      "colors": ["Anthracite"],
+      "highlights": [
+        "OLED+ picture quality",
+        "4-sided Ambilight",
+        "3.1 Bowers & Wilkins sound",
+        "120Hz refresh rate",
+        "Google TV"
+      ],
+      "productImages": [
+        "philips_oled908_1.jpg",
+        "philips_oled908_2.jpg",
+        "philips_oled908_3.jpg"
+      ],
+      "finalProductPrice": 179999,
+      "productPrice": 199999,
+      "productBrand": "Philips",
+      "category": "tv"
+    },
+    {
+      "productName": "Razer Blade 16",
+      "rating": 4.7,
+      "colors": ["Black"],
+      "highlights": [
+        "Intel Core i9-14900HX",
+        "NVIDIA GeForce RTX 4090",
+        "16-inch Mini LED display",
+        "32GB DDR5 RAM",
+        "2TB PCIe Gen4 NVMe SSD"
+      ],
+      "productImages": [
+        "razer_blade_16_1.jpg",
+        "razer_blade_16_2.jpg",
+        "razer_blade_16_3.jpg"
+      ],
+      "finalProductPrice": 344999,
+      "productPrice": 369999,
+      "productBrand": "Razer",
+      "category": "laptop"
+    },
+    {
+      "productName": "Samsung Galaxy Buds 3 Pro",
+      "rating": 4.5,
+      "colors": ["Phantom Black", "Pearl White"],
+      "highlights": [
+        "Intelligent ANC",
+        "360 Audio",
+        "24-bit Hi-Fi sound",
+        "8 hours playtime",
+        "Voice detect technology"
+      ],
+      "productImages": [
+        "galaxy_buds3_pro_1.jpg",
+        "galaxy_buds3_pro_2.jpg",
+        "galaxy_buds3_pro_3.jpg"
+      ],
+      "finalProductPrice": 19999,
+      "productPrice": 22999,
+      "productBrand": "Samsung",
+      "category": "accessory"
+    },
+    {
+      "productName": "Oppo Find X7 Ultra",
+      "rating": 4.6,
+      "colors": ["Ocean Blue", "Obsidian Black"],
+      "highlights": [
+        "Dimensity 9300+",
+        "50MP quad Hasselblad camera",
+        "6.8-inch LTPO AMOLED",
+        "5000mAh battery",
+        "100W fast charging"
+      ],
+      "productImages": [
+        "oppo_find_x7_ultra_1.jpg",
+        "oppo_find_x7_ultra_2.jpg",
+        "oppo_find_x7_ultra_3.jpg"
+      ],
+      "finalProductPrice": 84999,
+      "productPrice": 89999,
+      "productBrand": "Oppo",
+      "category": "mobile"
+    },
+    {
+      "productName": "Amazon Fire Max 11",
+      "rating": 4.2,
+      "colors": ["Gray"],
+      "highlights": [
+        "11-inch 2K display",
+        "Octa-core processor",
+        "8GB RAM",
+        "128GB storage",
+        "14-hour battery life"
+      ],
+      "productImages": [
+        "fire_max_11_1.jpg",
+        "fire_max_11_2.jpg",
+        "fire_max_11_3.jpg"
+      ],
+      "finalProductPrice": 27999,
+      "productPrice": 32999,
+      "productBrand": "Amazon",
+      "category": "tablet"
+    },
+    {
+      "productName": "Acer Predator Helios 18",
+      "rating": 4.5,
+      "colors": ["Abyssal Black"],
+      "highlights": [
+        "Intel Core i9-14900HX",
+        "NVIDIA GeForce RTX 4080",
+        "18-inch Mini LED display",
+        "32GB DDR5 RAM",
+        "2TB SSD"
+      ],
+      "productImages": [
+        "predator_helios_18_1.jpg",
+        "predator_helios_18_2.jpg",
+        "predator_helios_18_3.jpg"
+      ],
+      "finalProductPrice": 269999,
+      "productPrice": 289999,
+      "productBrand": "Acer",
+      "category": "laptop"
+    },
+    {
+      "productName": "Realme GT 6",
+      "rating": 4.4,
+      "colors": ["Fluid Silver", "Breeze Blue"],
+      "highlights": [
+        "Snapdragon 8 Gen 3",
+        "6.78-inch AMOLED display",
+        "50MP Sony main camera",
+        "5500mAh battery",
+        "120W fast charging"
+      ],
+      "productImages": [
+        "realme_gt6_1.jpg",
+        "realme_gt6_2.jpg",
+        "realme_gt6_3.jpg"
+      ],
+      "finalProductPrice": 44999,
+      "productPrice": 49999,
+      "productBrand": "Realme",
+      "category": "mobile"
+    },
+    {
+      "productName": "Pixel Watch 3",
+      "rating": 4.5,
+      "colors": ["Matte Black", "Hazel", "Rose Gold"],
+      "highlights": [
+        "Wear OS",
+        "Fitbit integration",
+        "Always-on display",
+        "Heart rate monitoring",
+        "Built-in Google Assistant"
+      ],
+      "productImages": [
+        "pixel_watch_3_1.jpg",
+        "pixel_watch_3_2.jpg",
+        "pixel_watch_3_3.jpg"
+      ],
+      "finalProductPrice": 36999,
+      "productPrice": 39999,
+      "productBrand": "Google",
+      "category": "smartWatch"
+    },
+    {
+      "productName": "LG gram 17",
+      "rating": 4.6,
+      "colors": ["Black", "White"],
+      "highlights": [
+        "Intel Core Ultra 7",
+        "17-inch IPS display",
+        "16GB LPDDR5X RAM",
+        "1TB NVMe SSD",
+        "Incredibly light at 1.35kg"
+      ],
+      "productImages": [
+        "lg_gram_17_1.jpg",
+        "lg_gram_17_2.jpg",
+        "lg_gram_17_3.jpg"
+      ],
+      "finalProductPrice": 144999,
+      "productPrice": 157999,
+      "productBrand": "LG",
+      "category": "laptop"
+    },
+    {
+      "productName": "Samsung Galaxy Tab A9+",
+      "rating": 4.3,
+      "colors": ["Graphite", "Silver"],
+      "highlights": [
+        "11-inch LCD display",
+        "Snapdragon 695 processor",
+        "8GB RAM",
+        "128GB storage",
+        "7040mAh battery"
+      ],
+      "productImages": [
+        "galaxy_tab_a9plus_1.jpg",
+        "galaxy_tab_a9plus_2.jpg",
+        "galaxy_tab_a9plus_3.jpg"
+      ],
+      "finalProductPrice": 24999,
+      "productPrice": 27999,
+      "productBrand": "Samsung",
+      "category": "tablet"
+    },
+    {
+      "productName": "Sony WF-1000XM5",
+      "rating": 4.7,
+      "colors": ["Black", "Platinum Silver"],
+      "highlights": [
+        "HD Noise Cancelling Processor QN2e",
+        "DSEE Extreme upscaling",
+        "8-hour battery life",
+        "Wireless charging case",
+        "Speak-to-chat technology"
+      ],
+      "productImages": [
+        "sony_wf1000xm5_1.jpg",
+        "sony_wf1000xm5_2.jpg",
+        "sony_wf1000xm5_3.jpg"
+      ],
+      "finalProductPrice": 21999,
+      "productPrice": 24999,
+      "productBrand": "Sony",
+      "category": "accessory"
+    }
+  ]
+}

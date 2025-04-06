@@ -5,3 +5,7 @@ cronPattern.txt
 logs/
 
 .env
+
+fake_products.json
+
+insertproducts.js
