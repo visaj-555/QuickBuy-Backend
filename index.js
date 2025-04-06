@@ -22,15 +22,16 @@ const PORT = parseInt(process.env.PORT, 10) || 3000;
 const HOST = process.env.HOST || "localhost";
 const DB_CONNECTION = process.env.CONNECTION;
 
+const allowedOrigins = ["http://localhost:3000", "http://127.0.0.1:5500"];
+
 const corsOptions = {
   origin: (origin, callback) => {
-    if (!origin || origin === "http://localhost:3000") {
+    if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
       callback(new Error("CORS not allowed"), false);
     }
   },
-
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"],
   allowedHeaders: ["Content-Type", "Authorization", "ids"],

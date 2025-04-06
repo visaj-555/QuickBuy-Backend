@@ -67,6 +67,88 @@ export const addProduct = async (req, res) => {
   }
 };
 
+export const updateProduct = async (req, res) => {
+  try {
+    // Handle image validation
+    if (req.fileValidationError) {
+      return res.status(statusCode.BAD_REQUEST).json({
+        statusCode: statusCode.BAD_REQUEST,
+        message: "Please upload valid image files (jpeg/jpg/png).",
+      });
+    }
+
+    if (req.fileSizeLimitError) {
+      return res.status(statusCode.BAD_REQUEST).json({
+        statusCode: statusCode.BAD_REQUEST,
+        message: "Each file size should be less than 5 MB.",
+      });
+    }
+
+    const productId = req.params.id;
+
+    const {
+      productName,
+      rating,
+      colors,
+      highlights,
+      finalProductPrice,
+      productPrice,
+      productBrand,
+      category,
+    } = req.body;
+
+    // Parse array fields if necessary
+    const colorArray = typeof colors === "string" ? JSON.parse(colors) : colors;
+    const highlightArray =
+      typeof highlights === "string" ? JSON.parse(highlights) : highlights;
+
+    const imagePaths = req.files
+      ? req.files.map((file) => file.path.replace(/\\/g, "/"))
+      : [];
+
+    // Build the update object
+    const updateData = {
+      ...(productName && { productName }),
+      ...(rating && { rating }),
+      ...(colors && { colors: colorArray }),
+      ...(highlights && { highlights: highlightArray }),
+      ...(finalProductPrice && { finalProductPrice }),
+      ...(productPrice && { productPrice }),
+      ...(productBrand && { productBrand }),
+      ...(category && { category }),
+    };
+
+    if (imagePaths.length) {
+      updateData.productImages = imagePaths;
+    }
+
+    const updatedProduct = await ProductModel.findByIdAndUpdate(
+      productId,
+      updateData,
+      { new: true }
+    );
+
+    if (!updatedProduct) {
+      return res.status(statusCode.NOT_FOUND).json({
+        statusCode: statusCode.NOT_FOUND,
+        message: "Product not found.",
+      });
+    }
+
+    res.status(statusCode.OK).json({
+      statusCode: statusCode.OK,
+      message: "Product updated successfully.",
+      data: updatedProduct,
+    });
+  } catch (error) {
+    logger.error(`Error updating product: ${error.message}`);
+    res.status(statusCode.INTERNAL_SERVER_ERROR).json({
+      statusCode: statusCode.INTERNAL_SERVER_ERROR,
+      message: message.INTERNAL_SERVER_ERROR,
+    });
+  }
+};
+
 export const getProducts = async (req, res) => {
   try {
     const { id, brands, rating, offer, sort, category } = req.query;
@@ -83,6 +165,7 @@ export const getProducts = async (req, res) => {
       return res.status(statusCode.OK).json({
         statusCode: statusCode.OK,
         data: product,
+        message: message.productView,
       });
     }
 
@@ -101,12 +184,40 @@ export const getProducts = async (req, res) => {
     res.status(statusCode.OK).json({
       statusCode: statusCode.OK,
       data: products,
+      message: message.productView,
     });
   } catch (error) {
     logger.error(`Error fetching products: ${error.message}`);
     res.status(statusCode.INTERNAL_SERVER_ERROR).json({
       statusCode: statusCode.INTERNAL_SERVER_ERROR,
       message: message.errorFetchingProducts,
+    });
+  }
+};
+
+export const deleteProduct = async (req, res) => {
+  try {
+    const productId = req.params.id;
+
+    const deletedProduct = await ProductModel.findByIdAndDelete(productId);
+
+    if (!deletedProduct) {
+      return res.status(statusCode.NOT_FOUND).json({
+        statusCode: statusCode.NOT_FOUND,
+        message: "Product not found.",
+      });
+    }
+
+    res.status(statusCode.OK).json({
+      statusCode: statusCode.OK,
+      message: message.productDeleted,
+      data: deletedProduct,
+    });
+  } catch (error) {
+    logger.error(`Error deleting product: ${error.message}`);
+    res.status(statusCode.INTERNAL_SERVER_ERROR).json({
+      statusCode: statusCode.INTERNAL_SERVER_ERROR,
+      message: message.INTERNAL_SERVER_ERROR,
     });
   }
 };

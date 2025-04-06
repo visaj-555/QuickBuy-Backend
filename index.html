@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Managing Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #007bff;
+        --secondary: #28a745;
+        --danger: #dc3545;
+        --background: #f4f7fa;
+        --card-bg: #ffffff;
+        --text: #212529;
+        --text-muted: #6c757d;
+        --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        --shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.12);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Roboto", sans-serif;
+        background: var(--background);
+        color: var(--text);
+        line-height: 1.6;
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .header {
+        background: var(--card-bg);
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: var(--shadow);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--primary);
+      }
+
+      .search-bar {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .search-input {
+        padding: 0.75rem 1rem;
+        border: 1px solid #dee2e6;
+        border-radius: 8px;
+        width: 300px;
+        font-size: 1rem;
+      }
+
+      .search-input:focus {
+        outline: none;
+        border-color: var(--primary);
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+      }
+
+      .main-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+      }
+
+      .product-list {
+        background: var(--card-bg);
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: var(--shadow);
+        height: calc(100vh - 180px);
+        overflow-y: auto;
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 2rem;
+      }
+
+      .product-card {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: var(--shadow);
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .image-gallery {
+        position: relative;
+        height: 200px;
+        margin-bottom: 1rem;
+        overflow: hidden;
+        border-radius: 8px;
+      }
+
+      .main-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 0.3s;
+      }
+
+      .image-thumbs {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        display: flex;
+        gap: 5px;
+      }
+
+      .thumb {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 4px;
+        border: 2px solid white;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+
+      .thumb:hover {
+        transform: scale(1.1);
+      }
+
+      .product-title {
+        font-size: 1.3rem;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+      }
+
+      .product-price {
+        color: var(--secondary);
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      .product-meta {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        margin: 0.5rem 0;
+      }
+
+      .colors-list,
+      .highlights-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin: 0.5rem 0;
+      }
+
+      .color-chip,
+      .highlight-chip {
+        padding: 0.25rem 0.75rem;
+        border-radius: 12px;
+        font-size: 0.85rem;
+        background: #e9ecef;
+      }
+
+      .action-buttons {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .btn {
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: 500;
+        transition: all 0.3s;
+      }
+
+      .btn-primary {
+        background: var(--primary);
+        color: white;
+      }
+      .btn-danger {
+        background: var(--danger);
+        color: white;
+      }
+      .btn-secondary {
+        background: #6c757d;
+        color: white;
+      }
+      .btn:hover {
+        filter: brightness(90%);
+      }
+
+      .form-panel {
+        background: var(--card-bg);
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: var(--shadow);
+        position: sticky;
+        top: 2rem;
+        height: calc(100vh - 180px);
+        overflow-y: auto;
+      }
+
+      .form-title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: var(--primary);
+        margin-bottom: 1.5rem;
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      label {
+        display: block;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+      }
+
+      input,
+      select,
+      .multi-select {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #dee2e6;
+        border-radius: 6px;
+        font-size: 1rem;
+      }
+
+      input:focus,
+      select:focus {
+        outline: none;
+        border-color: var(--primary);
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+      }
+
+      .multi-select {
+        min-height: 100px;
+        padding: 0.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        align-content: flex-start;
+      }
+
+      .tag {
+        background: #e9ecef;
+        padding: 0.25rem 0.75rem;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .remove-tag {
+        cursor: pointer;
+        color: #dc3545;
+        font-weight: bold;
+      }
+
+      .form-footer {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modal-content {
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        max-width: 500px;
+        width: 90%;
+        box-shadow: var(--shadow);
+      }
+
+      @media (max-width: 1024px) {
+        .main-content {
+          grid-template-columns: 1fr;
+        }
+        .form-panel {
+          position: relative;
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Product Managing Dashboard</h1>
+        <div class="search-bar">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="Search products..."
+            id="searchInput"
+          />
+          <button class="btn btn-primary" onclick="addNewProduct()">
+            Add Product
+          </button>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="product-list">
+          <div id="productGrid" class="product-grid"></div>
+        </div>
+
+        <div class="form-panel">
+          <h2 class="form-title" id="formTitle">Add New Product</h2>
+          <form id="productForm" enctype="multipart/form-data">
+            <div class="form-group">
+              <label>Product Name *</label>
+              <input name="productName" required />
+            </div>
+            <div class="form-group">
+              <label>Final Price *</label>
+              <input
+                name="finalProductPrice"
+                type="number"
+                step="0.01"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label>Original Price *</label>
+              <input name="productPrice" type="number" step="0.01" required />
+            </div>
+            <div class="form-group">
+              <label>Rating (0-5) *</label>
+              <input
+                name="rating"
+                type="number"
+                min="0"
+                max="5"
+                step="0.1"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label>Brand *</label>
+              <input name="productBrand" required />
+            </div>
+            <div class="form-group">
+              <label>Category *</label>
+              <select name="category" required>
+                <option value="">Select Category</option>
+                <option value="mobile">Mobile</option>
+                <option value="laptop">Laptop</option>
+                <option value="accessory">Accessory</option>
+                <option value="smartWatch">Smart Watch</option>
+                <option value="tv">TV</option>
+                <option value="tablet">Tablet</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Colors *</label>
+              <div class="multi-select" id="colorsSelect"></div>
+              <input
+                type="text"
+                id="colorInput"
+                placeholder="Add color and press Enter"
+              />
+            </div>
+            <div class="form-group">
+              <label>Highlights *</label>
+              <div class="multi-select" id="highlightsSelect"></div>
+              <input
+                type="text"
+                id="highlightInput"
+                placeholder="Add highlight and press Enter"
+              />
+            </div>
+            <div class="form-group">
+              <label>Images *</label>
+              <input type="file" name="productImages" multiple required />
+            </div>
+            <div class="form-footer">
+              <button type="submit" class="btn btn-primary" id="submitBtn">
+                Save Product
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                onclick="clearForm()"
+              >
+                Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="deleteModal">
+      <div class="modal-content">
+        <h2>Confirm Deletion</h2>
+        <p>
+          Are you sure you want to delete "<span id="deleteProductName"></span
+          >"?
+        </p>
+        <div style="margin-top: 1.5rem; display: flex; gap: 1rem">
+          <button class="btn btn-danger" id="confirmDelete">Delete</button>
+          <button class="btn btn-secondary" onclick="closeModal()">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const API_BASE = "http://localhost:4200";
+      let editingProductId = null;
+      let products = [];
+      let colors = [];
+      let highlights = [];
+
+      const productGrid = document.getElementById("productGrid");
+      const productForm = document.getElementById("productForm");
+      const formTitle = document.getElementById("formTitle");
+      const submitBtn = document.getElementById("submitBtn");
+      const searchInput = document.getElementById("searchInput");
+      const deleteModal = document.getElementById("deleteModal");
+      const colorsSelect = document.getElementById("colorsSelect");
+      const highlightsSelect = document.getElementById("highlightsSelect");
+      const colorInput = document.getElementById("colorInput");
+      const highlightInput = document.getElementById("highlightInput");
+
+      fetchProducts();
+
+      // Form submission
+      productForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const formData = new FormData(productForm);
+        formData.append("colors", JSON.stringify(colors));
+        formData.append("highlights", JSON.stringify(highlights));
+
+        const url = editingProductId
+          ? `${API_BASE}/product/update/${editingProductId}`
+          : `${API_BASE}/product/add`;
+        const method = editingProductId ? "PATCH" : "POST";
+
+        try {
+          submitBtn.disabled = true;
+          submitBtn.textContent = "Saving...";
+          const res = await fetch(url, { method, body: formData });
+          const data = await res.json();
+          if (!res.ok) throw new Error(data.message || "Operation failed");
+          clearForm();
+          fetchProducts();
+          showToast(editingProductId ? "Product updated!" : "Product added!");
+        } catch (err) {
+          showToast("Error: " + err.message, true);
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.textContent = "Save Product";
+        }
+      });
+
+      // Fetch products
+      async function fetchProducts() {
+        try {
+          productGrid.innerHTML =
+            '<div style="text-align: center; padding: 2rem;">Loading...</div>';
+          const res = await fetch(`${API_BASE}/product/view`);
+          const { data } = await res.json();
+          products = data || [];
+          renderProducts(products);
+        } catch (err) {
+          productGrid.innerHTML =
+            '<div style="text-align: center; padding: 2rem;">Error loading products</div>';
+        }
+      }
+
+      // Render products
+      function renderProducts(productsToRender) {
+        productGrid.innerHTML = "";
+        if (!productsToRender.length) {
+          productGrid.innerHTML =
+            '<div style="text-align: center; padding: 2rem;">No products found</div>';
+          return;
+        }
+
+        productsToRender.forEach((p) => {
+          const card = document.createElement("div");
+          card.className = "product-card";
+          card.innerHTML = `
+          <div class="image-gallery">
+            <img src="${API_BASE}/${
+            p.productImages[0]
+          }" class="main-image" alt="${p.productName}">
+            <div class="image-thumbs">
+              ${p.productImages
+                .map(
+                  (img) => `
+                <img src="${API_BASE}/${img}" class="thumb" onclick="changeImage(this, '${API_BASE}/${img}')">
+              `
+                )
+                .join("")}
+            </div>
+          </div>
+          <div class="product-title">${p.productName}</div>
+          <div class="product-price">₹${p.finalProductPrice.toLocaleString()}</div>
+          <div class="product-meta">
+            Brand: ${p.productBrand}<br>
+            Rating: ${p.rating}/5<br>
+            Category: ${p.category}
+          </div>
+          <div class="colors-list">
+            ${p.colors
+              .map((color) => `<span class="color-chip">${color}</span>`)
+              .join("")}
+          </div>
+          <div class="highlights-list">
+            ${p.highlights
+              .map(
+                (highlight) =>
+                  `<span class="highlight-chip">${highlight}</span>`
+              )
+              .join("")}
+          </div>
+          <div class="action-buttons">
+            <button class="btn btn-primary" onclick="editProduct('${
+              p._id
+            }')">Edit</button>
+            <button class="btn btn-danger" onclick="showDeleteModal('${
+              p._id
+            }', '${p.productName}')">Delete</button>
+          </div>
+        `;
+          productGrid.appendChild(card);
+        });
+      }
+
+      // Image gallery handler
+      window.changeImage = (thumb, src) => {
+        const gallery = thumb.closest(".image-gallery");
+        gallery.querySelector(".main-image").src = src;
+      };
+
+      // Edit product
+      function editProduct(id) {
+        const product = products.find((p) => p._id === id);
+        if (!product) return;
+
+        editingProductId = id;
+        formTitle.textContent = "Edit Product";
+        productForm.productName.value = product.productName;
+        productForm.finalProductPrice.value = product.finalProductPrice;
+        productForm.productPrice.value = product.productPrice;
+        productForm.rating.value = product.rating;
+        productForm.productBrand.value = product.productBrand;
+        productForm.category.value = product.category;
+        colors = [...product.colors];
+        highlights = [...product.highlights];
+        renderTags();
+      }
+
+      // Add new product
+      function addNewProduct() {
+        clearForm();
+        formTitle.textContent = "Add New Product";
+        editingProductId = null;
+      }
+
+      // Clear form
+      function clearForm() {
+        productForm.reset();
+        colors = [];
+        highlights = [];
+        renderTags();
+        formTitle.textContent = "Add New Product";
+        editingProductId = null;
+      }
+
+      // Tags management
+      function renderTags() {
+        colorsSelect.innerHTML = colors
+          .map(
+            (color) => `
+        <div class="tag">${color} <span class="remove-tag" onclick="removeColor('${color}')">×</span></div>
+      `
+          )
+          .join("");
+        highlightsSelect.innerHTML = highlights
+          .map(
+            (highlight) => `
+        <div class="tag">${highlight} <span class="remove-tag" onclick="removeHighlight('${highlight}')">×</span></div>
+      `
+          )
+          .join("");
+      }
+
+      colorInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter" && colorInput.value.trim()) {
+          colors.push(colorInput.value.trim());
+          colorInput.value = "";
+          renderTags();
+        }
+      });
+
+      highlightInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter" && highlightInput.value.trim()) {
+          highlights.push(highlightInput.value.trim());
+          highlightInput.value = "";
+          renderTags();
+        }
+      });
+
+      window.removeColor = (color) => {
+        colors = colors.filter((c) => c !== color);
+        renderTags();
+      };
+
+      window.removeHighlight = (highlight) => {
+        highlights = highlights.filter((h) => h !== highlight);
+        renderTags();
+      };
+
+      // Search
+      searchInput.addEventListener("input", (e) => {
+        const search = e.target.value.toLowerCase();
+        const filtered = products.filter(
+          (p) =>
+            p.productName.toLowerCase().includes(search) ||
+            p.productBrand.toLowerCase().includes(search) ||
+            p.category.toLowerCase().includes(search) ||
+            p.colors.some((c) => c.toLowerCase().includes(search)) ||
+            p.highlights.some((h) => h.toLowerCase().includes(search))
+        );
+        renderProducts(filtered);
+      });
+
+      // Delete modal
+      function showDeleteModal(id, name) {
+        document.getElementById("deleteProductName").textContent = name;
+        deleteModal.style.display = "flex";
+        document.getElementById("confirmDelete").onclick = async () => {
+          try {
+            const res = await fetch(`${API_BASE}/product/delete/${id}`, {
+              method: "DELETE",
+            });
+            const data = await res.json();
+            if (!res.ok) throw new Error(data.message || "Deletion failed");
+            fetchProducts();
+            showToast("Product deleted!");
+          } catch (err) {
+            showToast("Error: " + err.message, true);
+          }
+          closeModal();
+        };
+      }
+
+      function closeModal() {
+        deleteModal.style.display = "none";
+      }
+
+      // Toast
+      function showToast(message, isError = false) {
+        const toast = document.createElement("div");
+        toast.style.cssText = `
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 1rem 2rem;
+        background: ${isError ? "var(--danger)" : "var(--secondary)"};
+        color: white;
+        border-radius: 8px;
+        box-shadow: var(--shadow);
+        z-index: 1000;
+        animation: slideIn 0.3s ease-out;
+      `;
+        toast.textContent = message;
+        document.body.appendChild(toast);
+        setTimeout(() => {
+          toast.style.animation = "slideOut 0.3s ease-in";
+          setTimeout(() => toast.remove(), 300);
+        }, 3000);
+      }
+
+      // Animation keyframes
+      const styleSheet = document.createElement("style");
+      styleSheet.textContent = `
+      @keyframes slideIn {
+        from { transform: translateY(100px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+      }
+      @keyframes slideOut {
+        from { transform: translateY(0); opacity: 1; }
+        to { transform: translateY(100px); opacity: 0; }
+      }
+    `;
+      document.head.appendChild(styleSheet);
+    </script>
+  </body>
+</html>

@@ -49,7 +49,10 @@ export const message = {
   deleteUserError: "Error Deleting user",
   errorFetchingUsers: "Error Fetching users",
 
-  productAdded: "Added Product",
+  productAdded: "Added Product Successfully",
+  productUpdated: "Product Updated Successfully",
+  productDeleted: "Product Deleted Successfully",
+  productView: "Product Fetched Successfully",
 
   // Miscellaneous Errors
   INTERNAL_SERVER_ERROR: "Something went wrong",

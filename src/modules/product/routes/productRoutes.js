@@ -1,5 +1,10 @@
 import express from "express";
-import { addProduct, getProducts } from "../controller/productController.js";
+import {
+  addProduct,
+  deleteProduct,
+  getProducts,
+  updateProduct,
+} from "../controller/productController.js";
 import { uploadProductImages } from "../../../middlewares/upload.js"; // Import the correct upload middleware
 
 const Router = express.Router();
@@ -11,7 +16,14 @@ Router.post(
   addProduct
 );
 
-// Route to view product(s)
+Router.patch(
+  "/product/update/:id",
+  uploadProductImages.array("productImages"),
+  updateProduct
+);
+
+Router.delete("/product/delete/:id", deleteProduct);
+
 Router.get("/product/view", getProducts);
 
 export default Router;

@@ -81,6 +81,7 @@ export const loginUser = async (req, res) => {
     await tokenDoc.save();
 
     return res.status(200).json({
+      statusCode: statusCode.OK,
       message: "Login successful",
       data: {
         token,

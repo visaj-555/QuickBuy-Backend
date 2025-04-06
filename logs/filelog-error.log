@@ -1,3 +1,7 @@
 {"level":"error","message":"Error inserting admin user: UserModel is not defined","timestamp":"2025-03-30 10:27:08"}
 {"level":"error","message":"Error registering user: phoneNo is not defined","timestamp":"2025-03-30 10:30:22"}
 {"level":"error","message":"Error registering user: E11000 duplicate key error collection: investment.users index: phoneNo_1 dup key: { phoneNo: null }","timestamp":"2025-03-30 10:30:46"}
+{"level":"error","message":"Error adding product: Unexpected end of JSON input","timestamp":"2025-04-05 17:57:59"}
+{"level":"error","message":"Error adding product: Product validation failed: category: `TV` is not a valid enum value for path `category`.","timestamp":"2025-04-05 17:58:04"}
+{"level":"error","message":"Error updating product: Unexpected end of JSON input","timestamp":"2025-04-06 09:22:09"}
+{"level":"error","message":"Error updating product: Unexpected end of JSON input","timestamp":"2025-04-06 09:23:02"}
