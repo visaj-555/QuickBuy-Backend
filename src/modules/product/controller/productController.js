@@ -151,7 +151,7 @@ export const updateProduct = async (req, res) => {
 
 export const getProducts = async (req, res) => {
   try {
-    const { id, brands, rating, offer, sort, category } = req.query;
+    const { id, brands, rating, sort, category } = req.query;
     let filter = {};
 
     if (id) {
@@ -173,13 +173,12 @@ export const getProducts = async (req, res) => {
     if (rating) filter.rating = { $gte: Number(rating) };
     if (category) filter.category = category;
 
-    let products = await ProductModel.find(filter);
+    // Define sort object for finalProductPrice
+    let sortOption = {};
+    if (sort === "Low to High") sortOption.finalProductPrice = 1;
+    else if (sort === "High to Low") sortOption.finalProductPrice = -1;
 
-    if (sort === "Low to High") {
-      products.sort((a, b) => a.finalProductPrice - b.finalProductPrice);
-    } else if (sort === "High to Low") {
-      products.sort((a, b) => b.finalProductPrice - a.finalProductPrice);
-    }
+    const products = await ProductModel.find(filter).sort(sortOption);
 
     res.status(statusCode.OK).json({
       statusCode: statusCode.OK,
